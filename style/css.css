@@ -1,0 +1,136 @@
+/* --- Global Styles / Styles Généraux --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Arrière-plan doux */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #007bff; /* Bleu primaire pour le titre */
+    margin-bottom: 30px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* --- Form Container / Conteneur du Formulaire --- */
+.div-principale {
+    width: 100%;
+    max-width: 500px; /* Largeur maximale pour le formulaire */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* --- Form Styling / Style du Formulaire --- */
+.div-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacement entre les éléments du formulaire */
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    margin-top: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[name="durre"], /* C'est un input de type 'nombre' dans votre HTML, on le cible par le nom pour le style */
+input[name="nbrM"] /* De même pour celui-ci */
+ {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+}
+
+button {
+    background-color: #28a745; /* Vert pour l'action d'ajout */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* --- Course List Styling / Style de la Liste des Cours --- */
+/* Le formulaire qui contient la liste */
+body > form[method='post'] { 
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Chaque élément de cours (divv) */
+.divv {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between; /* Espacer les éléments */
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.divv > div:nth-child(1) {
+    /* Catégorie */
+    font-weight: bold;
+    color: #007bff;
+    width: 20%;
+}
+
+.divv > div:nth-child(2) {
+    /* Nom du cours */
+    flex-grow: 1; /* Prend l'espace restant */
+    padding: 0 15px;
+}
+
+/* Styles pour les boutons de la liste (modifier/supprimer) */
+.divv button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.divv button[name='edit'] {
+    background-color: #ffc107; /* Jaune pour l'édition */
+    color: #333;
+}
+
+.divv button[name='edit']:hover {
+    background-color: #e0a800;
+}
+
+.divv button[name='supp'] {
+    background-color: #dc3545; /* Rouge pour la suppression */
+}
+
+.divv button[name='supp']:hover {
+    background-color: #c82333;
+}
+
+/* Correction pour les inputs de type 'nombre' qui devraient être 'number' */
+/* Note: Votre HTML utilise 'nombre', si vous le changez en 'number', le code CSS sera plus précis. */
+/* Si vous ne changez pas le HTML, les sélecteurs par nom ci-dessus fonctionneront. */
